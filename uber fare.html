@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  
+  <!-- Make it compatible to mobile devices -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Uber fare Amount prediction</title>
+  
+</head>
+
+<body style="background: #000;">
+ <div class="login">
+	<h1 style="color:Violet;">Uber fare Amount prediction</h1>
+
+     <!-- Action is where the data is sent. In our case, predict page.
+     If action is omitted, it assumed to be the current page -->
+    <form action="{{ url_for('predict')}}"method="post">
+    	<input type="text" name="distance="distance" required="required" /><br>
+        <input type="text" name="time" placeholder="Time" required="required" /><p>
+        <input type="text" name="location" placeholder="location" required="required" /><p>
+        <input type="text" name="pickup_datetime" placeholder="pickup_datetime" required="required" /><p>
+        <input type="text" name="passenger_count" placeholder="passenger_count" required="required" /><p>
+        <input type="text" name="pickup_longitude" placeholder="pickup_longitude" required="required" /><p>
+        <input type="text" name="pickup_latitude" placeholder="pickup_latitude" required="required" /><p>
+        <input type="text" name="dropoff_longitude" placeholder="dropoff_longitude" required="required" /><p>
+        <input type="text" name="dropoff_latitude" placeholder="dropoff_latitude" required="required" /><p>
+
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict Uber fare Amount prediction </button></p>
+    </form>
+
+   <br>
+   <br>
+   <h4 style="color:Violet;">
+   {{ prediction_text }} </h4>
+
+ </div>
+
+
+</body>
+</html>
